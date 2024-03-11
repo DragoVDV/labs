@@ -5,7 +5,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import unittest
-from src.amout import size_m
+from src.size_m import size_m
 
 class TestSizeM(unittest.TestCase):
     
