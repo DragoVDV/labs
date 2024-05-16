@@ -10,8 +10,8 @@ from src.flood_fill import *
 class TestFloodFill(unittest.TestCase):
 
     def test_correct(self):
-        input_file = 'C:/Workspace/python/labs/resources/input1.txt'
-        output_file = 'C:/Workspace/python/labs/resources/output1.txt'
+        input_file = '../resources/input1.txt'
+        output_file = '../resources/output1.txt'
         flood_fill(input_file, output_file)
 
         expected_matrix = [
@@ -35,15 +35,15 @@ class TestFloodFill(unittest.TestCase):
   
     def test_out_of_range_error(self):
         with self.assertRaises(ValueError):
-         input_file = 'C:/Workspace/python/labs/resources/input2.txt'
-         output_file = 'C:/Workspace/python/labs/resources/output2.txt'
+         input_file = '../resources/input2.txt'
+         output_file = '../resources/output2.txt'
          flood_fill(input_file, output_file)
     
 
 
     def test_same_points(self):
-        input_file = 'C:/Workspace/python/labs/resources/input3.txt'
-        output_file = 'C:/Workspace/python/labs/resources/output3.txt'
+        input_file = '../resources/input3.txt'
+        output_file = '../resources/output3.txt'
         flood_fill(input_file, output_file)
         expected_matrix = [
             ['Y', 'Y', 'Y', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],

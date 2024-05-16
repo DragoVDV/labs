@@ -48,10 +48,4 @@ class BinaryHeap:
             print(None)
         for node in self.priority_queue:
             print(f"Value: {node.value}, Priority: {node.priority}")
-heap = BinaryHeap()
-heap.add_element('A', 10)
-heap.add_element('B', 20)
-heap.add_element('C', 15)
-heap.add_element('D', 5)
-heap.add_element('E', 25)
-heap.show_queue()
+

@@ -10,8 +10,8 @@ from src.career import *
 class Test_correct(unittest.TestCase):
 
     def test_correct(self):
-        input_file = 'C:/Workspace/python/labs/resources/career1_input'
-        output_file = 'C:/Workspace/python/labs/resources/career1_output'
+        input_file = '../resources/career1_input'
+        output_file = '../resources/career1_output'
         max_experience(input_file, output_file)
 
         with open(output_file, 'r') as file:
@@ -22,8 +22,8 @@ class Test_correct(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_zero(self):
-        input_file = 'C:/Workspace/python/labs/resources/career2_input'
-        output_file = 'C:/Workspace/python/labs/resources/career2_output'
+        input_file = '../resources/career2_input'
+        output_file = '../resources/career2_output'
         max_experience(input_file, output_file)
 
         with open(output_file, 'r') as file:
@@ -34,8 +34,8 @@ class Test_correct(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_negative(self):
-        input_file = 'C:/Workspace/python/labs/resources/career3_input'
-        output_file = 'C:/Workspace/python/labs/resources/career3_output'
+        input_file = '../resources/career3_input'
+        output_file = '../resources/career3_output'
         max_experience(input_file, output_file)
 
         with open(output_file, 'r') as file:

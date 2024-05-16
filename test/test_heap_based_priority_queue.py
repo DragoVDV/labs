@@ -1,5 +1,11 @@
+import sys
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
 import unittest
-from heap_based_priority_queue import BinaryHeap
+from src.heap_based_priority_queue import BinaryHeap
 
 class TestBinaryHeap(unittest.TestCase):
     def setUp(self):

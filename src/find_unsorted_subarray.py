@@ -24,6 +24,4 @@ def find_unsorted_subarray(arr):
     return (start,end)
 
 
-nums = [1,2,4,3,5]
-result = find_unsorted_subarray(nums)
-print(result)  
+

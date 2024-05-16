@@ -5,7 +5,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import unittest
-from src.calc2 import find_unsorted_subarray
+from src.find_unsorted_subarray import find_unsorted_subarray
 
 class TestSorting(unittest.TestCase):
     

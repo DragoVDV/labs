@@ -1,19 +1,27 @@
 import math
 
-def find_total_wire_length(distance_between_poles, heights):
-    total_length = 0
+def calculate_distance(gap_measure, height_difference):
     
-    for i in range(len(heights) - 1):
-        if heights[i] >= heights[i + 1]:
-            length = math.sqrt((heights[i] - 1) ** 2 + distance_between_poles ** 2)
-            heights[i + 1] = 1
-        else:
-            length = math.sqrt((heights[i + 1] - 1) ** 2 + distance_between_poles ** 2)
-            heights[i] = 1
-        
-        total_length += length
+    return (gap_measure ** 2 + height_difference ** 2) ** 0.5
 
-    return total_length 
+
+def define_max_wire_length(gap, heights):
+    max_top = 0
+    max_bottom = 0
+    index = 0
+    while index < len(heights) - 1:
+        height_diff = abs(heights[index] - heights[index + 1])
+        top_bottom = max_top + calculate_distance(gap, heights[index] - 1)
+        bottom_bottom = max_bottom + gap
+        bottom_top = max_bottom + calculate_distance(gap, heights[index + 1] - 1)
+        top_top = max_top + calculate_distance(gap, height_diff)
+        max_top = max(bottom_top, top_top)
+        max_bottom = max(bottom_bottom, top_bottom)
+        index += 1
+    return max(max_top, max_bottom)
+
+
+
 
 def read_txt(file_path):
     with open(file_path, 'r') as file:
@@ -24,6 +32,5 @@ def read_txt(file_path):
 def write_txt(file_path, result):
     with open(file_path, 'w') as file:
         file.write(f"{result:.2f}")  
-
 
 
